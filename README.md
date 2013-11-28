@@ -31,6 +31,8 @@ The path for PlistBuddy. I think it's usually installed in /usr/libexec/PlistBud
 
 # Usage Examples
 
+You can use the same arguments described manual. For more details, see ```man PlistBuddy```
+
 ```js
 grunt.initConfig({
   plistbuddy: {
