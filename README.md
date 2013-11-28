@@ -1,8 +1,13 @@
 # grunt-plistbuddy
 
-> PlistBuddy is the tool for manipulating plist file. This task is wrapper for PlistBuddy.
+PlistBuddy is the tool for manipulating plist file. This task is wrapper for PlistBuddy.
 
-## Getting Started
+If you want more details of PlistBuddy, see [develper.apple.com](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/PlistBuddy.8.html)
+
+In your project's Gruntfile, add a section named `plistbuddy` to the data object passed into `grunt.initConfig()`.
+
+
+# Getting Started
 This plugin requires Grunt `~0.4.1`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
@@ -16,23 +21,15 @@ One the plugin has been installed, it may be enabled inside your Gruntfile with 
 ```js
 grunt.loadNpmTasks('grunt-plistbuddy');
 ```
+# Options
 
-## Overview
-PlistBuddy is the tool for manipulating plist file. This task is wrapper for PlistBuddy.
-
-If you want more details of PlistBuddy, see [develper.apple.com](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/PlistBuddy.8.html)
-
-In your project's Gruntfile, add a section named `plistbuddy` to the data object passed into `grunt.initConfig()`.
-
-## Options
-
-#### options.path
+## options.path
 Type: `String`
 Default value: `/usr/libexec/PlistBuddy`
 
 The path for PlistBuddy. I think it's usually installed in /usr/libexec/PlistBuddy.
 
-### Usage Examples
+# Usage Examples
 
 ```js
 grunt.initConfig({
