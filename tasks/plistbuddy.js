@@ -4,8 +4,12 @@ module.exports = function (grunt) {
   'use strict';
 
   grunt.registerMultiTask('plistbuddy', 'maniplate plist with PlistBuddy', function () {
-    var PlistBuddy = this.options && this.options.path ? this.options.path : '/usr/libexec/PlistBuddy',
-      method = this.data.method,
+    // Merge task-specific and/or target-specific options with these defaults.
+    var options = this.options({
+      path: '/usr/libexec/PlistBuddy'
+    });
+    
+    var method = this.data.method,
       src = this.data.src,
       cb = this.async();
 
@@ -25,7 +29,7 @@ module.exports = function (grunt) {
     cmd = cmd.join(' ');
 
     grunt.util.spawn({
-      cmd: PlistBuddy,
+      cmd: options.path,
       args: ['-c', cmd, src]
     }, function (error, result, code) {
       if (error) {
