@@ -1,7 +1,7 @@
 {
   "name": "grunt-plistbuddy",
   "description": "maniplate plist with PlistBuddy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "http://memolog.org/",
   "author": {
     "name": "Yutaka Yamaguchi",
@@ -29,5 +29,6 @@
     "grunt": "~0.4.1"
   },
   "keywords": [
-    "gruntplugin"]
+    "gruntplugin"
+  ]
 }
