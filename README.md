@@ -76,3 +76,53 @@ grunt.initConfig({
   }
 })
 ```
+
+## Adding an array
+
+Create the array first, then add each element using its zero-based index. For example, to add `UIBackgroundModes` containing `audio` and `location`:
+
+```js
+grunt.initConfig({
+  plistbuddy: {
+    addBackgroundModes: {
+      method: 'Add',
+      entry: ':UIBackgroundModes',
+      type: 'array',
+      src: 'YourApp-Info.plist'
+    },
+    addBackgroundAudio: {
+      method: 'Add',
+      entry: ':UIBackgroundModes:0',
+      type: 'string',
+      value: 'audio',
+      src: 'YourApp-Info.plist'
+    },
+    addBackgroundLocation: {
+      method: 'Add',
+      entry: ':UIBackgroundModes:1',
+      type: 'string',
+      value: 'location',
+      src: 'YourApp-Info.plist'
+    }
+  }
+});
+
+grunt.loadNpmTasks('grunt-plistbuddy');
+grunt.registerTask('backgroundModes', [
+  'plistbuddy:addBackgroundModes',
+  'plistbuddy:addBackgroundAudio',
+  'plistbuddy:addBackgroundLocation'
+]);
+```
+
+Run `npx grunt backgroundModes` to execute these targets in order. The resulting plist contains:
+
+```xml
+<key>UIBackgroundModes</key>
+<array>
+  <string>audio</string>
+  <string>location</string>
+</array>
+```
+
+This example assumes `UIBackgroundModes` does not already exist. `Add` fails if the array key already exists. To replace an existing array, run a separate `Delete` target with `entry: ':UIBackgroundModes'` before these targets. Only run that deletion when the key exists, since deleting a missing key also fails.
