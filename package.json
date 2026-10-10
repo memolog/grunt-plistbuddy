@@ -23,6 +23,9 @@
   "engines": {
     "node": ">=16"
   },
+  "scripts": {
+    "test": "node test/plistbuddy.js"
+  },
   "peerDependencies": {
     "grunt": "^1.6.3"
   },

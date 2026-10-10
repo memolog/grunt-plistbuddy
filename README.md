@@ -21,6 +21,10 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 ```js
 grunt.loadNpmTasks('grunt-plistbuddy');
 ```
+# Testing
+
+Run `npm test` on macOS to verify string updates and array creation using the actual PlistBuddy executable. No additional test dependencies are required. These integration tests are skipped when `/usr/libexec/PlistBuddy` is unavailable.
+
 # Options
 
 ## options.path
