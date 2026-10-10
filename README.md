@@ -8,15 +8,15 @@ In your project's Gruntfile, add a section named `plistbuddy` to the data object
 
 
 # Getting Started
-This plugin requires Grunt `~0.4.1`
+This plugin requires Grunt `^1.6.3` and Node.js `>=16`.
 
-If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
+If you haven't used [Grunt](https://gruntjs.com/) before, be sure to check out the [Getting Started](https://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](https://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, install the latest stable Grunt release and this plugin in your project:
 
 ```shell
-npm install grunt-plistbuddy --save-dev
+npm install --save-dev grunt@latest grunt-plistbuddy
 ```
 
-One the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
+Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
 grunt.loadNpmTasks('grunt-plistbuddy');
